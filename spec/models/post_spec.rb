@@ -49,5 +49,4 @@ RSpec.describe Post, type: :model do
     subject.title = title
     expect(subject).not_to be_valid
   end
-
 end

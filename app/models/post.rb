@@ -9,6 +9,7 @@ class Post < ApplicationRecord
   validate :validation_comments_counter
 
   after_initialize :initialize_comments_counter
+  after_initialize :initialize_likes_counter
 
   def update_post_counter
     author.update(post_counter: author.posts.count)
@@ -26,5 +27,9 @@ class Post < ApplicationRecord
 
   def initialize_comments_counter
     self.comments_counter ||= 0
+  end
+
+  def initialize_likes_counter
+    self.likes_counter ||= 0
   end
 end
