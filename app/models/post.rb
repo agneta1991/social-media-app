@@ -1,11 +1,11 @@
 class Post < ApplicationRecord
-  belongs_to :user, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :author, class_name: 'User'
   has_many :comments
   has_many :likes
   after_save :update_post_counter
 
   def update_post_counter
-    user.update(post_counter: user.posts.count)
+    author.update(post_counter: author.posts.count)
   end
 
   def most_recent_comments(limit = 5)
