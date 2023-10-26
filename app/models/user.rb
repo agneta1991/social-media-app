@@ -6,6 +6,8 @@ class User < ApplicationRecord
   validates :name, presence: true
   validate :validation_posts_counter
 
+  after_initialize :initialize_post_counter
+
   def most_recent_post(limit = 3)
     posts.order(created_at: :desc).limit(limit)
   end
@@ -13,8 +15,12 @@ class User < ApplicationRecord
   private
 
   def validation_posts_counter
-    return unless posts_counter.present? && (!posts_counter.is_a?(Integer) || posts_counter <= 0)
+    return unless post_counter.present? && (!post_counter.is_a?(Integer) || post_counter.negative?)
 
-    errors.add(:posts_counter, 'It must be a number greater than or equal to zero')
+    errors.add(:post_counter, 'It must be a number greater than or equal to zero') unless post_counter.zero?
+  end
+
+  def initialize_post_counter
+    self.post_counter ||= 0
   end
 end

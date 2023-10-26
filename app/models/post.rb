@@ -8,6 +8,8 @@ class Post < ApplicationRecord
   validates :title, length: { maximum: 250 }
   validate :validation_comments_counter
 
+  after_initialize :initialize_comments_counter
+
   def update_post_counter
     author.update(post_counter: author.posts.count)
   end
@@ -17,8 +19,12 @@ class Post < ApplicationRecord
   end
 
   def validation_comments_counter
-    return unless comments_counter.present? && (!comments_counter.is_a?(Integer) || comments_counter <= 0)
+    return unless comments_counter.present? && (!comments_counter.is_a?(Integer) || comments_counter.negative?)
 
-    errors.add(:comments_counter, 'It must be a number greater than or equal to zero')
+    errors.add(:comments_counter, 'It must be a number greater than or equal to zero') unless comments_counter.zero?
+  end
+
+  def initialize_comments_counter
+    self.comments_counter ||= 0
   end
 end
