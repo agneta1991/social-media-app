@@ -49,4 +49,27 @@ RSpec.describe Post, type: :model do
     subject.title = title
     expect(subject).not_to be_valid
   end
+
+  it 'updates likes_counter when a like is added' do
+    initial_likes_counter = 0
+    expect(subject.likes_counter).to eq(initial_likes_counter)
+    subject.save
+    subject.likes.create(post: first_post, author: second_user)
+    expect(subject.reload.likes_counter).to eq(initial_likes_counter + 1)
+  end
+
+  it 'should raise an error if likes_counter is negative' do
+    subject.likes_counter = -1
+    expect(subject).not_to be_valid
+  end
+
+  it 'should be valid when likes_counter is zero' do
+    subject.likes_counter = 0
+    expect(subject).to be_valid
+  end
+
+  it 'should be valid when likes_counter is positive' do
+    subject.likes_counter = 5
+    expect(subject).to be_valid
+  end
 end

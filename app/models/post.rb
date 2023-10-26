@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validates :title, presence: true
   validates :title, length: { maximum: 250 }
   validate :validation_comments_counter
+  validate :validation_likes_counter
 
   after_initialize :initialize_comments_counter
   after_initialize :initialize_likes_counter
@@ -23,6 +24,12 @@ class Post < ApplicationRecord
     return unless comments_counter.present? && (!comments_counter.is_a?(Integer) || comments_counter.negative?)
 
     errors.add(:comments_counter, 'It must be a number greater than or equal to zero') unless comments_counter.zero?
+  end
+
+  def validation_likes_counter
+    return unless likes_counter.present? && (!likes_counter.is_a?(Integer) || likes_counter.negative?)
+
+    errors.add(:likes_counter, 'It must be a number greater than or equal to zero') unless likes_counter.zero?
   end
 
   def initialize_comments_counter
