@@ -1,3 +1,28 @@
-body {
-    background-color: red;
+img {
+  height: 10rem;
+  width: auto;
+}
+
+.user_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.user_info {
+  width: 60rem;
+  padding: 0.5rem;
+}
+
+.user_name {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: left;
+}
+
+.number_of_posts {
+  text-align: right;
+  font-size: 1.3rem;
 }

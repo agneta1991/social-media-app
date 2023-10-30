@@ -1,4 +1,21 @@
-<div>
-  <h1><%= @user.name %></h1>
-  <p><%= @user.bio %></p>
+<div class='user_div'>
+  <div class='user_photo'>
+    <%= image_tag @user.photo %>
+  </div>
+  <div class='user_info'>
+    <p class='user_name'><%= @user.name %></p>
+    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+  </div>
+</div>
+
+<div class='user_bio'>
+  <%= @user.bio %>
+</div>
+
+<div class='posts'>
+  <% @posts.each do |post| %>
+    <h2> Post #<%= post.id %></h2>
+    <h3><%= post.title %></h3>
+    <p><%= post.text %></p>
+  <% end %>
 </div>
