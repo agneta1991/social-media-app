@@ -50,7 +50,11 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'database_cleaner' # for database_cleaner
   gem 'debug', platforms: %i[mri mswin mswin64 mingw x64_mingw]
+  gem 'factory_bot_rails' # for factory_bot
+  gem 'faker' # for faker
+  gem 'shoulda-matchers' # for shoulda-matchers
 end
 
 group :development do
@@ -69,3 +73,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+gem 'rails-controller-testing'
