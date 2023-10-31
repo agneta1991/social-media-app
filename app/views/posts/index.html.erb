@@ -1,9 +1,33 @@
-<h1>Here is a list of posts for a given user</h1>
+<h1>Here is a list of posts for a given user <%= @user.name %></h1>
 
-<ul>
+<div class='user_div'>
+  <div class='user_photo'>
+    <%= image_tag @user.photo %>
+  </div>
+  <div class='user_info'>
+    <p class='user_name'><%= @user.name %></p>
+    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+  </div>
+</div>
+
+<div class='posts'>
   <% @posts.each do |post| %>
-    <li>
-      <%= post.title %>
-    </li>
+    <div class='individual_post'>
+      <h2> Post #<%= post.id %></h2>
+      <h3><%= post.title %></h3>
+      <p>
+        <%= truncate(post.text, length: 130, omission: '...') %>
+        <% if post.text.length > 20 %>
+        <% end %>
+      </p>
+      <div class='comments'>
+        <p class='number_of_posts'> Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+      </div>
+      <div class='comments_div'>
+        <% post.comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>

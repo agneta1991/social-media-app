@@ -14,8 +14,15 @@
 
 <div class='posts'>
   <% @posts.each do |post| %>
+  <div class= individual_post>
     <h2> Post #<%= post.id %></h2>
     <h3><%= post.title %></h3>
-    <p><%= post.text %></p>
+    <%= truncate(post.text, length: 130, omission: '...') %>
+        <% if post.text.length > 20 %>
+                <% end %>
+                <div class='comments'>
+        <p class='number_of_posts'> Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
   <% end %>
 </div>
