@@ -14,7 +14,7 @@
 
 <div class='posts'>
   <% post_number = 1 %>
-  <% @posts.each do |post| %>
+  <% @user.most_recent_post.each do |post| %>
     <div class='individual_post'>
       <h2>Post #<%= post_number %></h2>
       <h3><%= post.title %></h3>
