@@ -1,4 +1,32 @@
-<div>
-  <h1><%= @user.name %></h1>
-  <p><%= @user.bio %></p>
+<div class='user_div'>
+  <div class='user_photo'>
+    <%= image_tag @user.photo %>
+  </div>
+  <div class='user_info'>
+    <p class='user_name'><%= @user.name %></p>
+    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+  </div>
+</div>
+
+<div class='user_bio'>
+  <%= @user.bio %>
+</div>
+
+<div class='posts'>
+  <% post_number = 1 %>
+  <% @user.most_recent_post.each do |post| %>
+    <div class='individual_post'>
+      <h2>Post #<%= post_number %></h2>
+      <h3><%= post.title %></h3>
+      <p>
+      <%= truncate(post.text, length: 130, omission: '...') %>
+      <% if post.text.length > 20 %>
+      <% end %>
+      </p>
+      <div class='comments'>
+        <p class='number_of_comments'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+      </div>
+    </div>
+    <% post_number += 1 %>
+  <% end %>
 </div>
