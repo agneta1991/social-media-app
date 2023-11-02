@@ -58,6 +58,7 @@ img {
   margin-top: 2rem;
   padding: 1rem;
 }
+
 h2 {
   margin: 0.3rem;
   font-size: 1.5rem;
@@ -91,7 +92,7 @@ h3 {
   font-size: 1.8rem;
 }
 
-a>.button {
+a > .button {
   float: right;
   width: 15rem;
   height: 5rem;
@@ -106,7 +107,8 @@ a {
   text-decoration: none;
   color: black;
 }
-a>.btn {
+
+a > .btn {
   background-color: green;
   color: white;
   font-weight: 900;
@@ -127,7 +129,7 @@ textarea {
   height: 3rem;
 }
 
-.actions>input {
+.actions > input {
   background-color: green;
   color: white;
   font-weight: 900;
