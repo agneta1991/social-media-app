@@ -3,22 +3,21 @@
     <%= image_tag @user.photo %>
   </div>
   <div class='user_info'>
-    <p class='user_name'><%= @user.name %></p>
-    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+    <p class='user_name'><%= @user.name %> <br>
+    <%= link_to new_user_post_path(@user), class: 'btn' do %>
+    <button class='btn'>Create new post</button>
+  <% end %>    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
   </div>
 </div>
 
 <div class='posts'>
-  <% post_number = 1 %>
   <% @posts.each do |post| %>
     <div class='individual_post'>
       <%= link_to user_post_path(@user, post) do %>
-        <h2>Post #<%= post_number %></h2>
         <h3><%= post.title %></h3>
         <p>
           <%= truncate(post.text, length: 130, omission: '...') %>
           <% if post.text.length > 20 %>
-            <% post_number += 1 %>
           <% end %>
         </p>
         <div class='comments'>

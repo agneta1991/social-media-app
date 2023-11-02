@@ -106,3 +106,30 @@ a {
   text-decoration: none;
   color: black;
 }
+a>.btn {
+  background-color: green;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.main_form_div {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+textarea {
+  width: 25rem;
+  height: 3rem;
+}
+
+.actions>input {
+  background-color: green;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
