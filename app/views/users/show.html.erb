@@ -19,9 +19,9 @@
       <h2>Post #<%= post_number %></h2>
       <h3><%= post.title %></h3>
       <p>
-      <%= truncate(post.text, length: 130, omission: '...') %>
-      <% if post.text.length > 20 %>
-      <% end %>
+        <%= truncate(post.text, length: 130, omission: '...') %>
+        <% if post.text.length > 20 %>
+        <% end %>
       </p>
       <div class='comments'>
         <p class='number_of_comments'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
@@ -30,3 +30,7 @@
     <% post_number += 1 %>
   <% end %>
 </div>
+
+<%= link_to user_posts_path(@user), class: 'button' do %>
+  <button class='button'>See All Posts</button>
+<% end %>

@@ -48,6 +48,16 @@ img {
   padding: 1rem;
 }
 
+.individual_post:hover {
+  box-shadow: 3px 3px 5px 1px rgba(4, 86, 18, 0.792);
+  text-shadow: 1px 1px rgba(4, 86, 18, 0.792);
+}
+
+.individual_large_post {
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.4);
+  margin-top: 2rem;
+  padding: 1rem;
+}
 h2 {
   margin: 0.3rem;
   font-size: 1.5rem;
@@ -65,7 +75,7 @@ h3 {
   font-size: 1.2rem;
 }
 
-.comments_div > p {
+.comments_div {
   font-size: 1.2rem;
   font-style: italic;
   margin: 1rem;
@@ -79,4 +89,20 @@ h3 {
 
 .whole_post {
   font-size: 1.8rem;
+}
+
+a>.button {
+  float: right;
+  width: 15rem;
+  height: 5rem;
+  background-color: green;
+  color: white;
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
