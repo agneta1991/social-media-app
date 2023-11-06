@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post', type: :feature do
   user = User.first
   post = Post.first
+
   it 'shows user profile picture' do
     visit user_posts_path(user)
     expect(page).to have_selector("img[src='#{user.photo}']")
@@ -53,5 +54,44 @@ RSpec.describe 'Post', type: :feature do
     visit user_posts_path(user)
     click_link(post.title)
     expect(page).to have_current_path(user_post_path(user, post))
+  end
+
+  it 'displays post title' do
+    visit user_post_path(user, post)
+    expect(page).to have_content(post.title)
+  end
+
+  it 'displays who wrote the post' do
+    visit user_post_path(user, post)
+    expect(page).to have_content(user.name)
+  end
+
+  it 'displays number of comments of the post' do
+    visit user_post_path(user, post)
+    expect(page).to have_content("Comments: #{post.comments_counter}")
+  end
+
+  it 'displays number of likes of the post' do
+    visit user_post_path(user, post)
+    expect(page).to have_content("Likes: #{post.likes_counter}")
+  end
+
+  it 'displays post body' do
+    visit user_post_path(user, post)
+    expect(page).to have_content(post.text)
+  end
+
+  it 'displays the name of the commenter' do
+    visit user_post_path(user, post)
+    post.comments.each do |comment|
+      expect(page).to have_content(comment.author.name)
+    end
+  end
+
+  it 'displays the body of the comment' do
+    visit user_post_path(user, post)
+    post.comments.each do |comment|
+      expect(page).to have_content(comment.text)
+    end
   end
 end
