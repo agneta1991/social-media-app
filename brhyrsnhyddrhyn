@@ -1,0 +1,235 @@
+[33mcommit ca14895b3e05ddfb88b7126f52599dd041b4ff0b[m[33m ([m[1;36mHEAD -> [m[1;32mintegration_testing[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Nov 7 16:12:51 2023 +0200
+
+    Revert "setting up devise"
+    
+    This reverts commit 1c95b7e63fb6a72b905b93213a6cb0c38db54093.
+
+[33mcommit 1c95b7e63fb6a72b905b93213a6cb0c38db54093[m[33m ([m[1;31morigin/integration_testing[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Nov 7 16:11:06 2023 +0200
+
+    setting up devise
+
+[33mcommit 9b729a2118b49d44762d354bd01d7861e3068a37[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Nov 7 13:25:11 2023 +0200
+
+    added optional changes
+
+[33mcommit 65e20e98de48627186b0381f020089c7d6cbd87b[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Nov 7 12:04:46 2023 +0200
+
+    Added required changes
+
+[33mcommit 20717e7346b033032c5475ac91a400b5446248d9[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Nov 7 09:16:33 2023 +0200
+
+    Typos fixed
+
+[33mcommit dfffe1797c1ec216981de940eb36defccfc79bff[m
+Author: akorede <emiolasaheed1@gmail.com>
+Date:   Tue Nov 7 07:52:14 2023 +0100
+
+    Test user show click events
+
+[33mcommit bc20cbe05f2b4f5deef30734cbc2eec254bbff52[m
+Author: akorede <emiolasaheed1@gmail.com>
+Date:   Tue Nov 7 07:51:38 2023 +0100
+
+    Test user show features
+
+[33mcommit c00d14c1ff7d5b7e48608f016baf25d767667ad1[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Nov 6 16:51:08 2023 +0200
+
+    Linters fixed
+
+[33mcommit f3ead133334bf2f49f3950dd07c9cc214e4028d6[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Nov 6 16:47:45 2023 +0200
+
+    Added tests for post show page
+
+[33mcommit 0609d40b2d6fc0f010f64c8f7d0154d1fdbc1ad3[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Nov 6 16:17:55 2023 +0200
+
+    Added tests for user show page
+
+[33mcommit 832b8896357818b9e92350769c43236bb2242f61[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Nov 6 12:52:38 2023 +0200
+
+    Added tests for user index page
+
+[33mcommit 43291b96f4508a5999b722398e2f0dfe051fdc67[m[33m ([m[1;31morigin/forms[m[33m, [m[1;32mforms[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Nov 2 18:17:52 2023 +0200
+
+    Linter errors fixed
+
+[33mcommit caf579f6d93ecdd174d669e5576cea4fade510bf[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Nov 2 18:14:17 2023 +0200
+
+    Added logic to add like
+
+[33mcommit cfc907f1995c9a6b3373bc6d68bacb949c08e218[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Nov 2 13:23:27 2023 +0200
+
+    Created logic for current user to write posts and leave comments
+
+[33mcommit eec473aa26e5894686599369036652f809040576[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Nov 2 10:40:49 2023 +0200
+
+    Updated links to redirect to correct url
+
+[33mcommit 1ef735279cb5798d7f1db3b84b68fdf392a708d9[m[33m ([m[1;31morigin/styling[m[33m, [m[1;32mstyling[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Nov 1 12:44:51 2023 +0200
+
+    Added required changes
+
+[33mcommit 967893516ce566785b14b2755550ea0d75ac7547[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Oct 31 16:16:37 2023 +0200
+
+    Linter errors fixed
+
+[33mcommit 3c599d9da6612ec8a8d383071c13f8ac0e4b172b[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Oct 31 16:08:45 2023 +0200
+
+    Added CSS
+
+[33mcommit fe9714c022ba232c45b00a6edb7ee327a1aa9174[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Oct 31 15:24:48 2023 +0200
+
+    Added logic for all pages to display correct info
+
+[33mcommit 6a1b7e5ab673fc795f4ca15a2071b2f026132cca[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Oct 30 18:20:25 2023 +0200
+
+    Added dynamic rendering of posts to specific user
+
+[33mcommit 37e0d7c6a0e6a29687a49938bb4a0e894ef5f380[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Oct 30 17:07:12 2023 +0200
+
+    Updating data base
+
+[33mcommit 5bd661d0928036f2b0f78236d10d5de08c935194[m[33m ([m[1;31morigin/controllers_specs[m[33m, [m[1;32mcontrollers_specs[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Oct 30 14:15:21 2023 +0200
+
+    Added tests for index, cleaned up the code
+
+[33mcommit c77c23c025f804a1caf60c4e55ed69b6f965ec22[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Oct 30 13:46:51 2023 +0200
+
+    Tests created for controllers
+
+[33mcommit ade6a973752dabe41e0e899f2b10e36a8e3f3034[m[33m ([m[1;31morigin/controllers[m[33m, [m[1;32mcontrollers[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Mon Oct 30 09:43:23 2023 +0200
+
+    Added routes, files in view and controllers
+
+[33mcommit 85f52222ff609e68529894adbf7844ec199fa354[m[33m ([m[1;31morigin/validations-and-model-specs[m[33m, [m[1;32mvalidations-and-model-specs[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 15:17:47 2023 +0300
+
+    linters fixed
+
+[33mcommit 43102392372f51c315925c75371c0f280664a80e[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 14:28:22 2023 +0300
+
+    linter errors
+
+[33mcommit 1af1c8d7a6cd78de180185f78b4f81e3bb02a001[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 14:26:51 2023 +0300
+
+    added tests
+
+[33mcommit 611881fefca376b0f661b5727355d91e84ae7f98[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 12:06:56 2023 +0300
+
+    added six validations for user & posts
+
+[33mcommit eb85b8b3702da273892410f2856a57c30df89adf[m[33m ([m[1;31morigin/processing-data[m[33m, [m[1;32mprocessing-data[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 10:14:18 2023 +0300
+
+    required changes added
+
+[33mcommit cd1284d30a09fa1f32eef85105512ffb3555e9f2[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 08:54:44 2023 +0300
+
+    linters fixed
+
+[33mcommit 23d163542d1a2c30bde45f9cfbb479b51d2cb8c0[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Thu Oct 26 08:47:10 2023 +0300
+
+    added methods
+
+[33mcommit 394b1ae3b5a4561e3dcfd4e9b561008b6be5fe28[m[33m ([m[1;31morigin/data-model[m[33m, [m[1;32mdata-model[m[33m)[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 13:18:49 2023 +0300
+
+    added required changes
+
+[33mcommit f426c55a6b3c628b2a7cb88621f1f296b21a31c1[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 12:19:18 2023 +0300
+
+    linters
+
+[33mcommit d12133e56702d3cf2311dd83c7b34ff1c86deee0[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 12:17:13 2023 +0300
+
+    linters fixed
+
+[33mcommit fdc01d302f6fe3085113fc28488cf857423f0a8a[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 12:09:15 2023 +0300
+
+    linters
+
+[33mcommit 55dbbf43bdbc6517798de19a2c4379d255d3d8ca[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 11:59:14 2023 +0300
+
+    added readme file and license
+
+[33mcommit 9498f01850001cde70da320d2d91f19a2862b6dc[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Wed Oct 25 11:44:29 2023 +0300
+
+    created postgres tables
+
+[33mcommit f23d5962e20ff9b2a4ffd3b6c7d78b7acfbd1f3b[m
+Author: agneta1991 <pupienytea@gmail.com>
+Date:   Tue Oct 24 17:53:53 2023 +0300
+
+    linters set up, app set up
+
+[33mcommit d93c994cbe2b52d8ae7c038f0eb8fa15940be1a5[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m, [m[1;32mdev[m[33m)[m
+Author: Agneta Pupienyte <a.pupienyte@gmail.com>
+Date:   Tue Oct 24 17:28:41 2023 +0300
+
+    Initial commit
