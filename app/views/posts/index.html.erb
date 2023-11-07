@@ -6,8 +6,7 @@
     <p class='user_name'><%= @user.name %> <br>
     <%= link_to new_user_post_path(@user), class: 'btn' do %>
     <button class='btn'>Create new post</button>
-  <% end %>    
-  <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+  <% end %>    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
   </div>
 </div>
 

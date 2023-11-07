@@ -57,8 +57,6 @@ group :development, :test do
   gem 'shoulda-matchers' # for shoulda-matchers
 end
 
-gem 'letter_opener', group: :development
-
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
@@ -77,5 +75,3 @@ group :test do
 end
 
 gem 'rails-controller-testing'
-
-gem "devise", "~> 4.9"
