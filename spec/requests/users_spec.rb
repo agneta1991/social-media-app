@@ -1,7 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-  let(:user) { User.create(name: 'Agneta', id: 1) }
+  let(:user) { User.create(name: 'Rose', photo: 'https://unsplash.com/photos/F_-0000BxGuVvo', bio: 'Teacher from Mexico.') }
+  let(:post) { Post.create(author: user, title: 'Hey', text: 'This is my post') }
 
   describe 'GET /index' do
     before { get users_url }
@@ -15,7 +16,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('<h1>Here is a list of users</h1>')
+      expect(response.body).to include("<div class='main_div'>")
     end
   end
 
@@ -31,7 +32,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include("<h1>#{user.name}</h1>")
+      expect(response.body).to include("<p class='user_name'>#{user.name}</p>")
     end
   end
 end
