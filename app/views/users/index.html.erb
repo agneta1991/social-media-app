@@ -1,6 +1,7 @@
 <div class='main_div'>
-  <% @users.each do |user| %>
-    <div class='user_div'>
+  <% if user_signed_in? %>
+    <% @users.each do |user| %>
+      <div class='user_div'>
         <div class='user_photo'>
           <%= image_tag user.photo %>
         </div>
@@ -8,6 +9,11 @@
           <%= link_to user.name, user_path(user), class: 'user_name'%>
           <p class='number_of_posts'>Number of posts: <%= user.post_counter %></p>
         </div>
-    </div>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to new_user_registration_path, class: 'button' do %>
+      <button class='btn'>Sign Up</button>
+    <% end %>
   <% end %>
 </div>
