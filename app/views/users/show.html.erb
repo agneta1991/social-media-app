@@ -28,6 +28,6 @@
   <% end %>
 </div>
 
-<%= link_to user_posts_path(@user), class: 'button' do %>
+<%= link_to user_posts_path(current_user), class: 'button' do %>
   <button class='button'>See All Posts</button>
 <% end %>
