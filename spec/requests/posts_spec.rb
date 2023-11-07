@@ -27,7 +27,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('<h1>Here is a post for given user</h1>')
+      expect(response.body).to include('<h3>Comments:</h3>')
     end
   end
 
@@ -46,7 +46,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'includes correct placeholder text in the response body' do
-      expect(response.body).to include('<h1>Here is a post for given user</h1>')
+      expect(response.body).to include('<h3>Comments:</h3>')
     end
   end
 end

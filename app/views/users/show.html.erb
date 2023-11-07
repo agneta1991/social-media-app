@@ -13,10 +13,8 @@
 </div>
 
 <div class='posts'>
-  <% post_number = 1 %>
   <% @user.most_recent_post.each do |post| %>
     <div class='individual_post'>
-      <h2>Post #<%= post_number %></h2>
       <h3><%= post.title %></h3>
       <p>
         <%= truncate(post.text, length: 130, omission: '...') %>
@@ -27,7 +25,6 @@
         <p class='number_of_comments'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
       </div>
     </div>
-    <% post_number += 1 %>
   <% end %>
 </div>
 

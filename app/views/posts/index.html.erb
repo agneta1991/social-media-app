@@ -13,8 +13,7 @@
 <div class='posts'>
   <% @posts.each do |post| %>
     <div class='individual_post'>
-      <%= link_to user_post_path(@user, post) do %>
-        <h3><%= post.title %></h3>
+        <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
         <p>
           <%= truncate(post.text, length: 130, omission: '...') %>
           <% if post.text.length > 20 %>
@@ -29,7 +28,7 @@
             <p><%= comment.author.name %>: <%= comment.text %></p>
           <% end %>
         </div>
-      <% end %>
     </div>
   <% end %>
+  <button> Pagination </button>
 </div>
