@@ -4,6 +4,8 @@ RSpec.describe 'Post', type: :feature do
   user = User.first
   post = Post.first
 
+  #   Tests for User post index page:
+
   it 'shows user profile picture' do
     visit user_posts_path(user)
     expect(page).to have_selector("img[src='#{user.photo}']")
@@ -55,6 +57,8 @@ RSpec.describe 'Post', type: :feature do
     click_link(post.title)
     expect(page).to have_current_path(user_post_path(user, post))
   end
+
+  #   Tests for User post show page:
 
   it 'displays post title' do
     visit user_post_path(user, post)
