@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(:comments)
+    @user = current_user
+    @posts = current_user.posts
   end
 
   def show
@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.find_by(params[:id])
+    @post = Post.new
     @comment = Comment.new
     @like = Like.new
   end
@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.author = current_user
     if @post.save
-      redirect_to user_posts_path
+      redirect_to user_posts_path(current_user)
     else
       render :new, locals: { post: @post }
     end
