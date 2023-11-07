@@ -86,4 +86,22 @@ RSpec.describe 'User', type: :feature do
       end
     end
   end
+
+  context 'Clicks' do
+    it "redirects me to the user's post  on clicking on a post" do
+      user = User.first
+      visit user_path(user)
+      user.most_recent_posts.each do |post|
+        click_link post.title
+        expect(page).to have_current_path(user_post_path(user, post))
+        visit user_path(user)
+      end
+    end
+    it "redirects me to the user's post clicking on see all posts" do
+      user = User.first
+      visit user_path(user)
+      click_link 'See all posts'
+      expect(page).to have_current_path(user_posts_path(user))
+    end
+  end
 end
