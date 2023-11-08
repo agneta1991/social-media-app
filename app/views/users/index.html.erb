@@ -3,17 +3,23 @@
     <% @users.each do |user| %>
       <div class='user_div'>
         <div class='user_photo'>
-          <%= image_tag user.photo %>
+          <%= image_tag(user.photo) %>
         </div>
         <div class='user_info'>
-          <%= link_to user.name, user_path(user), class: 'user_name'%>
+          <%= link_to user.name, user_path(user), class: 'user_name' %>
           <p class='number_of_posts'>Number of posts: <%= user.post_counter %></p>
         </div>
       </div>
     <% end %>
   <% else %>
+  <div class=main-login>
+    <h1> Welcome to <span> Social media app</span></h1>
     <%= link_to new_user_registration_path, class: 'button' do %>
       <button class='btn'>Sign Up</button>
     <% end %>
+    <%= link_to new_user_session_path, class: 'button' do %>
+      <button class='btn'>Log In</button>
+    <% end %>
   <% end %>
+  </div>
 </div>

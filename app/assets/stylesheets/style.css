@@ -135,3 +135,63 @@ textarea {
   font-weight: 900;
   font-size: 1.2rem;
 }
+
+.main-login-div,
+.main-login {
+  width: 50%;
+  height: 25%;
+  border: 1px solid rgba(0, 128, 0, 0.475);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-login>a>.btn {
+  width: 15rem;
+  height: 2rem;
+  margin: 0.3rem;
+}
+
+.main-login-div>form {
+  width: 27%;
+  padding: 0.7rem;
+}
+
+.main-login-div>a {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.field-remeber {
+  display: flex;
+  justify-content: center;
+  width: 120%;
+}
+
+.field-remeber>label {
+  width: 120%;
+}
+
+.navbar {
+  background-color: green;
+  padding: 2rem;
+  display: flex;
+  justify-content: right;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 900;
+  margin: 0;
+}
+
+.navbar>a {
+  color: white;
+}
+
+span {
+  color: green;
+  font-weight: 900;
+  font-style: italic;
+}
