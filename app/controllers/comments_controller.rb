@@ -12,6 +12,25 @@ class CommentsController < ApplicationController
     else
       render :new
     end
+
+    def edit
+      @comment = user.post.comments.find(params[:post_id])
+    end
+
+    def update
+      @comment = post.comments.find(params[:post_id])
+      if @comment.update
+        redirect_to user_posts_path(current_user), notice: 'Comment was successfully updated.'
+      else
+        render :edit
+      end
+    end
+
+    def destroy
+      @comment = post.comments.find(params[:post_id])
+      @comment.destroy
+      redirect_to user_posts_path(current_user), notice: 'Comments was successfully deleted.'
+    end
   end
 
   private

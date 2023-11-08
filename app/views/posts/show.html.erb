@@ -28,6 +28,22 @@
     <div class='comments_div'>
       <p><%= comment.text %></p>
       <p>Written by: <%= comment.author.name %></p>
+      <%
+=begin%>
+ edit comment is missing a link to path views / comments/ edit  
+<%
+=end%>
+      <% if user_signed_in? && current_user%>
+     <button class='btn'>Edit Comment</button>
+     <%
+=begin%>
+ this link also is set up but it does not actually delete the comment  
+<%
+=end%>
+      <%= link_to user_post_comment_path(@post, user_id: @user.id, post_id: @post.id), data: {turbo_method: :delete}, class: "btn" do %>
+        <button class='btn'>Delete Comment</button>
+      <% end %>
+    <% end %>
     </div>
   <% end %>
 </div>
