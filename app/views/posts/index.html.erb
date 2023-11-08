@@ -3,31 +3,34 @@
     <%= image_tag @user.photo %>
   </div>
   <div class='user_info'>
-    <p class='user_name'><%= @user.name %> <br>
-    <%= link_to new_user_post_path(@user), class: 'btn' do %>
-    <button class='btn'>Create new post</button>
-  <% end %>    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
+    <p class='user_name'><%= @user.name %></p>
+    <% if current_user == @user %>
+      <%= link_to new_user_post_path(@user), class: 'btn' do %>
+        <button class='btn'>Create new post</button>
+      <% end %>
+    <% end %>
+    <p class='number_of_posts'>Number of posts: <%= @user.post_counter %></p>
   </div>
 </div>
 
 <div class='posts'>
   <% @posts.each do |post| %>
     <div class='individual_post'>
-        <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
-        <p>
-          <%= truncate(post.text, length: 130, omission: '...') %>
-          <% if post.text.length > 20 %>
-          <% end %>
-        </p>
-        <div class='comments'>
-          <p class='number_of_comments'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
-        </div>
-        <div class='comments_div'>
-          <h3>Comments:</h3>
-          <% post.most_recent_comments.each do |comment| %>
-            <p><%= comment.author.name %>: <%= comment.text %></p>
-          <% end %>
-        </div>
+      <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+      <p>
+        <%= truncate(post.text, length: 130, omission: '...') %>
+        <% if post.text.length > 20 %>
+        <% end %>
+      </p>
+      <div class='comments'>
+        <p class='number_of_comments'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+      </div>
+      <div class='comments_div'>
+        <h3>Comments:</h3>
+        <% post.most_recent_comments.each do |comment| %>
+          <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <button> Pagination </button>
