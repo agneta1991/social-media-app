@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users
-  root to: 'users#index'
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
+  root 'users#index'
 
   get '/users/:user_id/posts/new', to: 'posts#new', as: 'new_user_post'
   post '/users/:user_id/posts', to: 'posts#create', as: 'create_user_post'

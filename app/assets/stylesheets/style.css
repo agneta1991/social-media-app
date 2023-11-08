@@ -138,8 +138,6 @@ textarea {
 
 .main-login-div,
 .main-login {
-  width: 50%;
-  height: 25%;
   border: 1px solid rgba(0, 128, 0, 0.475);
   display: flex;
   flex-direction: column;
@@ -149,18 +147,18 @@ textarea {
   width: 100vw;
 }
 
-.main-login>a>.btn {
+.main-login > a > .btn {
   width: 15rem;
   height: 2rem;
   margin: 0.3rem;
 }
 
-.main-login-div>form {
+.main-login-div > form {
   width: 27%;
   padding: 0.7rem;
 }
 
-.main-login-div>a {
+.main-login-div > a {
   padding: 0.5rem;
   font-size: 1.2rem;
 }
@@ -171,7 +169,7 @@ textarea {
   width: 120%;
 }
 
-.field-remeber>label {
+.field-remeber > label {
   width: 120%;
 }
 
@@ -186,7 +184,7 @@ textarea {
   margin: 0;
 }
 
-.navbar>a {
+.navbar > a {
   color: white;
 }
 
