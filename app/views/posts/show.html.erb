@@ -4,14 +4,23 @@
     <p class='number_of_posts'> Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
     <p class='whole_post'><%= @post.text %></p>
     
-    <%= link_to new_user_post_comment_path(@post), class: 'btn' do %>
+    <%= link_to new_user_post_comment_path(@post, user_id: @user.id), class: 'btn' do %>
       <button class='btn'>Add a comment</button>
     <% end %>
     
-    <%= link_to new_user_post_like_path(@post.author), class: "btn" do %>
+    <%= link_to new_user_post_like_path(@post, user_id: @user.id), class: "btn" do %>
       <button class='btn'>Add a like</button>
     <% end %>
-
+    
+    <% if user_signed_in? && current_user == @post.author %>
+      <%= link_to edit_user_post_path(@post), class: 'btn' do %>
+        <button class='btn'>Edit Post</button>
+      <% end %>
+      
+      <%= link_to user_post_path(@user, @post), data: {turbo_method: :delete}, class: "btn" do %>
+        <button class='btn'>Delete Post</button>
+      <% end %>
+    <% end %>
   </div>
 
   <h3>Comments:</h3>

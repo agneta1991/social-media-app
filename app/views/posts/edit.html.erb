@@ -1,0 +1,14 @@
+<div class='main_form_div'>
+  <h1>Edit your post</h1>
+  <%= form_with(model: [current_user, @post], data: { turbo: false }, local: true) do |form| %>
+    <div class="field">
+      <%= form.text_field :title, placeholder: 'Title', value: @post.title %>
+    </div>
+    <div class="field">
+      <%= form.text_area :text, placeholder: 'Your post', value: @post.text %>
+    </div>
+    <div class="actions">
+      <%= form.submit "Update Post", class: "btn" %>
+    </div>
+  <% end %>
+</div>
