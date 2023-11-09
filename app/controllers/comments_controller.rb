@@ -1,16 +1,25 @@
 class CommentsController < ApplicationController
   before_action :load_post
 
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+
+    render json: @comments, except: %i[created_at updated_at]
+  end
+
   def new
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new
   end
 
   def create
+    @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params.merge(author: current_user))
     if @comment.save
-      redirect_to user_post_path(@post.author, @post)
+      render json: @comment, status: :created, location: user_post_comment_path(current_user, @post, @comment)
     else
-      render :new
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
