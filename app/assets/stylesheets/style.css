@@ -198,6 +198,6 @@ textarea {
   height: 20rem;
 }
 
-form>*>* {
+form > * > * {
   font-size: 1.2rem;
 }
