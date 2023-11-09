@@ -1,6 +1,13 @@
 class CommentsController < ApplicationController
   before_action :load_post
 
+  def index
+    @post = Post.find(params[:post_id])
+    @comments = @post.comments
+
+    render json: @comments, except: %i(created_at updated_at)
+  end
+
   def new
     @comment = @post.comments.new
   end
