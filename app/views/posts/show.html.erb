@@ -12,11 +12,13 @@
       <button class='btn'>Add a like</button>
     <% end %>
     
-    <% if user_signed_in? && current_user == @post.author %>
+     <% if can? :update, @post %>
       <%= link_to edit_user_post_path(@post), class: 'btn' do %>
         <button class='btn'>Edit Post</button>
       <% end %>
-      
+    <% end %>
+
+    <% if can? :destroy, @post %>
       <%= link_to user_post_path(@user, @post), data: {turbo_method: :delete}, class: "btn" do %>
         <button class='btn'>Delete Post</button>
       <% end %>
