@@ -15,9 +15,10 @@ class CommentsController < ApplicationController
   def create
     @comment = @post.comments.new(comment_params.merge(author: current_user))
     if @comment.save
-      redirect_to user_post_path(@post.author, @post)
+      render json: @comment, status: :created, location: @comment
+      # redirect_to user_post_path(@post.author, @post)
     else
-      render :new
+      render json: @comment, status: :unprocessable_entity
     end
   end
 
