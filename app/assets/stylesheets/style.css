@@ -193,3 +193,11 @@ span {
   font-weight: 900;
   font-style: italic;
 }
+
+textarea {
+  height: 20rem;
+}
+
+form > * > * {
+  font-size: 1.2rem;
+}
