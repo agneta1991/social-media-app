@@ -30,8 +30,10 @@
     <div class='comments_div'>
       <p><%= comment.text %></p>
       <p>Written by: <%= comment.author.name %></p>
-      <%= link_to user_post_comment_path(@user, @post, comment), data: {turbo_method: :delete}, class: "btn" do %>
-        <button class='btn'>Delete Comment</button>
+      <% if can? :destroy, comment %>
+        <%= link_to user_post_comment_path(@user, @post, comment), data: {turbo_method: :delete}, class: "btn" do %>
+          <button class='btn'>Delete Comment</button>
+        <% end %>
       <% end %>
     </div>
   <% end %>
